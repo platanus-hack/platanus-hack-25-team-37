@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Rounded square background with solid green color -->
+  <rect width="32" height="32" rx="8" ry="8" fill="#4ade80"/>
+  <!-- Scale icon (balance) - white, centered -->
+  <g fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Base stand -->
+    <line x1="16" y1="8" x2="16" y2="18"/>
+    <!-- Horizontal beam -->
+    <line x1="10" y1="18" x2="22" y2="18"/>
+    <!-- Left plate -->
+    <line x1="10" y1="18" x2="10" y2="22"/>
+    <line x1="8" y1="22" x2="12" y2="22"/>
+    <!-- Right plate -->
+    <line x1="22" y1="18" x2="22" y2="22"/>
+    <line x1="20" y1="22" x2="24" y2="22"/>
+  </g>
+</svg>
+
