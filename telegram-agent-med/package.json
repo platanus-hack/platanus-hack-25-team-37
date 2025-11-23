@@ -1,0 +1,38 @@
+{
+  "name": "telegram-agent-med",
+  "version": "1.0.0",
+  "description": "Agente de Telegram para enviar mensajes de citas de mediaciones usando OpenAI",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--no-deprecation' tsx watch src/index.ts",
+    "dev:cloudflare": "wrangler dev",
+    "build": "tsc",
+    "start": "NODE_OPTIONS='--no-deprecation' node dist/index.js",
+    "deploy": "wrangler deploy",
+    "check": "NODE_OPTIONS='--no-deprecation' tsx src/check-config.ts",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "telegram",
+    "openai",
+    "mediacion",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "openai": "^4.20.1",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.50.0"
+  }
+}

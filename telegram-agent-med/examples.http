@@ -1,0 +1,73 @@
+### Ejemplos de uso del API
+### Puedes usar este archivo con la extensión REST Client de VS Code
+### o copiar los comandos curl para usarlos en terminal
+
+@baseUrl = http://localhost:3000
+@chatId = TU_CHAT_ID_AQUI
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Obtener todas las conversaciones
+GET {{baseUrl}}/api/conversations
+
+### Obtener conversación específica
+GET {{baseUrl}}/api/conversations/{{chatId}}
+
+### Enviar mensaje de mediación (ejemplo completo)
+POST {{baseUrl}}/api/send-mediation
+Content-Type: application/json
+
+{
+  "phoneNumber": "{{chatId}}",
+  "appointmentData": {
+    "nombre": "María González",
+    "fecha": "2025-12-15",
+    "hora": "14:30",
+    "lugar": "Centro de Mediación Familiar, Calle Principal 456, Santiago",
+    "mediador": "Dr. Carlos Ramírez",
+    "notasAdicionales": "Por favor traer documentación de identidad y llegar 15 minutos antes de la hora programada."
+  }
+}
+
+### Enviar mensaje de mediación (ejemplo mínimo)
+POST {{baseUrl}}/api/send-mediation
+Content-Type: application/json
+
+{
+  "phoneNumber": "{{chatId}}",
+  "appointmentData": {
+    "nombre": "Juan Pérez",
+    "fecha": "2025-12-01",
+    "hora": "10:00 AM",
+    "lugar": "Centro de Mediación, Av. Principal 123"
+  }
+}
+
+###############################################
+# Comandos CURL equivalentes
+###############################################
+
+# Health Check
+# curl http://localhost:3000/health
+
+# Obtener todas las conversaciones
+# curl http://localhost:3000/api/conversations
+
+# Obtener conversación específica
+# curl http://localhost:3000/api/conversations/TU_CHAT_ID_AQUI
+
+# Enviar mensaje de mediación
+# curl -X POST http://localhost:3000/api/send-mediation \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "phoneNumber": "TU_CHAT_ID_AQUI",
+#     "appointmentData": {
+#       "nombre": "María González",
+#       "fecha": "2025-12-15",
+#       "hora": "14:30",
+#       "lugar": "Centro de Mediación Familiar, Calle Principal 456",
+#       "mediador": "Dr. Carlos Ramírez",
+#       "notasAdicionales": "Traer documentación de identidad"
+#     }
+#   }'

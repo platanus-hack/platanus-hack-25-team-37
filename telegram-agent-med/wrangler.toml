@@ -1,0 +1,15 @@
+name = "telegram-agent-med"
+main = "src/worker.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare KV para almacenar conversaciones
+[[kv_namespaces]]
+binding = "CONVERSATIONS"
+id = "2fb2a7362f364e998ea10854d26c15a4"
+preview_id = "6421e06be9ae4103ac0c67f1d21810c8"
+
+# Variables de entorno (se configuran en Cloudflare Dashboard o con wrangler secret)
+# TELEGRAM_BOT_TOKEN se configura con: wrangler secret put TELEGRAM_BOT_TOKEN
+# OPENAI_API_KEY se configura con: wrangler secret put OPENAI_API_KEY
+

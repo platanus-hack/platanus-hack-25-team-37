@@ -1,0 +1,33 @@
+name = "wakai-backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Variables de entorno (configura estos valores con wrangler secret put)
+# SUPABASE_URL - URL de tu proyecto Supabase (ej: https://xxx.supabase.co)
+# SUPABASE_KEY - API Key de Supabase (service_role key para server-side)
+# TELEGRAM_API_URL - https://telegram-agent-med.josebmxfredes.workers.dev/api/send-mediation
+# OPENAI_API_KEY - API Key de OpenAI para ChatKit (ej: sk-...)
+
+# Para development
+[env.dev]
+vars = { ENVIRONMENT = "development" }
+
+# Para production
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
