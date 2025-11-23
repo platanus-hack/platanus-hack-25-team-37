@@ -1,4 +1,5 @@
 {
   "project-name": "wakai",
-  "project-description-spanish": "<FILL THIS>"
+  "project-description-spanish": "Wakai es una plataforma que transforma la forma en que familias y centros de mediación resuelven sus conflictos. Todo comienza con un sitio web simple y agradable donde los casos se pueden seguir fácilmente, ver el estado de los participantes y sentir tranquilidad. Además, Wakai envía recordatorios y mensajes importantes en el momento justo, para que nadie se pierda su cita. Para las personas, hay un asistente en Telegram que responde dudas y apoya en cada paso. Wakai hace que la mediación sea más cercana, clara y amable para todos, conectando tecnología y humanidad.",
+  "deploy-url": "https://wakai-bgp.pages.dev/"
 }
